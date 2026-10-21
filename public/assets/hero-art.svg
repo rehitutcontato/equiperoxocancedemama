@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 640" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE4E9" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#FFD1DC" stop-opacity="0.5" />
+      <stop offset="100%" stop-color="#FFF0F3" stop-opacity="0.2" />
+    </linearGradient>
+    <linearGradient id="roseSkin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCE1D4" />
+      <stop offset="100%" stop-color="#F5C6B3" />
+    </linearGradient>
+    <linearGradient id="hairGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D1115" />
+      <stop offset="100%" stop-color="#4A1521" />
+    </linearGradient>
+    <linearGradient id="dressGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#FFF0F5" />
+    </linearGradient>
+    <linearGradient id="ribbonSilk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF4378" />
+      <stop offset="50%" stop-color="#E11D48" />
+      <stop offset="100%" stop-color="#881337" />
+    </linearGradient>
+    <linearGradient id="leafGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E29578" />
+      <stop offset="100%" stop-color="#BE185D" />
+    </linearGradient>
+    <filter id="shadowAura" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#BE185D" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop Circles -->
+  <circle cx="340" cy="300" r="230" fill="url(#bgGlow)" />
+  <circle cx="210" cy="200" r="140" fill="#FFF5F7" opacity="0.6" />
+
+  <!-- Botanical Decorative Elements -->
+  <g opacity="0.45" filter="url(#shadowAura)">
+    <path d="M 440,120 Q 520,160 510,240 Q 450,220 440,120 Z" fill="url(#leafGold)" />
+    <path d="M 490,200 Q 560,250 530,320 Q 480,280 490,200 Z" fill="url(#leafGold)" opacity="0.7" />
+    <path d="M 80,420 Q 40,360 90,300 Q 130,350 80,420 Z" fill="url(#leafGold)" opacity="0.6" />
+    <path d="M 120,480 Q 70,440 100,380 Q 150,420 120,480 Z" fill="url(#leafGold)" opacity="0.8" />
+  </g>
+
+  <!-- Large Stylized Floating Pink Ribbon in Background -->
+  <g transform="translate(420, 110) scale(1.4)" filter="url(#shadowAura)">
+    <path d="M 40,10 C 25,10 15,25 20,45 C 26,65 48,88 62,102 C 58,82 60,62 55,48 C 50,32 55,10 40,10 Z" fill="url(#ribbonSilk)" opacity="0.85" />
+    <path d="M 40,10 C 55,10 65,25 60,45 C 52,65 34,88 18,102 C 22,82 20,62 25,48 C 30,32 25,10 40,10 Z" fill="url(#ribbonSilk)" />
+  </g>
+
+  <!-- Serene Editorial Female Figure -->
+  <g filter="url(#shadowAura)">
+    <!-- Long Flowing Hair (Back) -->
+    <path d="M 270,140 C 180,150 140,240 150,370 C 155,440 180,510 210,560 C 230,480 250,410 270,360 Z" fill="url(#hairGrad)" />
+
+    <!-- Shoulders & Torso -->
+    <path d="M 220,430 C 230,370 280,350 340,350 C 400,350 440,380 455,440 C 465,490 470,570 470,640 L 190,640 C 190,570 205,490 220,430 Z" fill="url(#dressGrad)" stroke="#FCE7EC" stroke-width="2" />
+    
+    <!-- Neck & Chest -->
+    <path d="M 305,270 L 305,360 C 320,380 350,380 365,360 L 365,270 Z" fill="url(#roseSkin)" />
+    <!-- Clavicle details -->
+    <path d="M 295,355 Q 335,365 375,355" stroke="#E5B29F" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.6" />
+
+    <!-- Head & Face -->
+    <path d="M 335,160 C 285,160 275,210 275,255 C 275,295 305,335 335,335 C 365,335 395,295 395,255 C 395,210 385,160 335,160 Z" fill="url(#roseSkin)" />
+
+    <!-- Elegant Hair (Front & Waves) -->
+    <path d="M 275,220 C 270,160 310,120 365,120 C 420,120 445,165 440,230 C 435,290 410,340 430,420 C 400,370 395,300 390,260 C 370,190 320,180 275,220 Z" fill="url(#hairGrad)" />
+    <!-- Single Earring / Pearl Accent -->
+    <circle cx="282" cy="275" r="4.5" fill="#FCE7EC" stroke="#BE185D" stroke-width="1.5" />
+
+    <!-- Serene Eyes (Closed/Reflective), Eyebrow, Lips -->
+    <!-- Closed Eyelash Line (Right & Left) -->
+    <path d="M 295,248 Q 308,256 320,248" stroke="#36051F" stroke-width="2.2" stroke-linecap="round" fill="none" />
+    <path d="M 345,248 Q 358,256 370,248" stroke="#36051F" stroke-width="2.2" stroke-linecap="round" fill="none" />
+    <!-- Eyebrows -->
+    <path d="M 292,238 Q 306,233 322,240" stroke="#4A1521" stroke-width="1.8" stroke-linecap="round" fill="none" />
+    <path d="M 342,240 Q 358,233 372,238" stroke="#4A1521" stroke-width="1.8" stroke-linecap="round" fill="none" />
+    <!-- Delicate Nose -->
+    <path d="M 334,248 L 331,272 Q 338,276 342,272" stroke="#E5B29F" stroke-width="2" stroke-linecap="round" fill="none" />
+    <!-- Soft Blush -->
+    <circle cx="295" cy="268" r="14" fill="#FF8BA7" opacity="0.25" />
+    <circle cx="370" cy="268" r="14" fill="#FF8BA7" opacity="0.25" />
+    <!-- Sophisticated Rose Lips -->
+    <path d="M 324,292 Q 334,289 344,292 Q 334,302 324,292 Z" fill="#E11D48" />
+
+    <!-- Delicate Hand on Chest (Self-Care & Awareness Gesture) -->
+    <g transform="translate(315, 380)">
+      <path d="M 20,40 C 15,20 28,0 42,10 C 50,16 65,35 60,60 C 50,85 10,75 5,55 Z" fill="url(#roseSkin)" />
+      <!-- Slender Fingers -->
+      <path d="M 35,12 C 45,-5 58,15 50,30" stroke="#E5B29F" stroke-width="2" fill="none" stroke-linecap="round" />
+      <path d="M 22,25 C 28,10 40,15 38,32" stroke="#E5B29F" stroke-width="2" fill="none" stroke-linecap="round" />
+      <path d="M 12,40 C 16,30 25,35 22,48" stroke="#E5B29F" stroke-width="2" fill="none" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Floating Sparkles & Light Particles -->
+  <g fill="#BE185D" opacity="0.7">
+    <path d="M 180,180 L 183,189 L 192,192 L 183,195 L 180,204 L 177,195 L 168,192 L 177,189 Z" />
+    <path d="M 480,380 L 482,386 L 488,388 L 482,390 L 480,396 L 478,390 L 472,388 L 478,386 Z" fill="#E11D48" />
+    <circle cx="230" cy="120" r="3" fill="#E11D48" opacity="0.5" />
+    <circle cx="470" cy="180" r="2.5" fill="#E11D48" opacity="0.6" />
+    <circle cx="150" cy="270" r="3.5" fill="#BE185D" opacity="0.4" />
+  </g>
+</svg>

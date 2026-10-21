@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Rosa em Alerta — Informação, Cuidado e Prevenção | Outubro Rosa</title>
+  
+  <meta name="description" content="Plataforma institucional de alta performance para conscientização sobre o câncer de mama. Dados oficiais do INCA 2026–2028, Quiz de 10 perguntas, Ranking escolar com banco de dados e Agente de IA.">
+  <meta name="theme-color" content="#4A072B">
+
+  <!-- Favicon Ribbon -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+
+  <!-- Estilos da Plataforma -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/ranking.css">
+  <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+
+  <!-- BARRA DE ANÚNCIO DE TOPO -->
+  <div class="top-bar">
+    <span>🌸 <strong>Outubro Rosa Escolar:</strong> Conhecer é uma forma de cuidar.</span>
+    <span>•</span>
+    <a href="#quiz">Participe do Quiz Oficial de 10 Questões e dispute o Ranking ↗</a>
+  </div>
+
+  <!-- CABEÇALHO INSTITUCIONAL LUXO -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#inicio" class="header-brand" aria-label="Rosa em Alerta Início">
+        <img src="assets/logo.svg" alt="Rosa em Alerta — Logotipo Oficial">
+      </a>
+
+      <!-- MENU DE NAVEGAÇÃO -->
+      <nav class="header-nav" id="main-nav">
+        <a href="#inicio" class="nav-link active">Início</a>
+        <a href="#dados" class="nav-link">Dados INCA</a>
+        <a href="#prevencao" class="nav-link">Prevenção</a>
+        <a href="#autoconhecimento" class="nav-link">Conheça seu Corpo</a>
+        <a href="#sinais" class="nav-link">Sinais de Alerta</a>
+        <a href="#atendimento" class="nav-link">Onde Buscar Atendimento</a>
+        <a href="#quiz" class="nav-link">Quiz (10 Questões)</a>
+        <a href="#ranking" class="nav-link">Ranking Escolar</a>
+        <a href="#comunidade" class="nav-link">Comunidade</a>
+      </nav>
+
+      <!-- AÇÕES DO CABEÇALHO -->
+      <div class="header-actions">
+        <a href="#quiz" class="btn btn-primary" id="header-quiz-btn">Fazer Quiz (10 Q) ✦</a>
+        <button class="mobile-toggle" aria-label="Abrir Menu" aria-expanded="false">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- SEÇÃO HERO EDITORIAL -->
+    <section class="hero-section" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span>🎗️</span> OUTUBRO ROSA • EDIÇÃO HACKATHON
+          </div>
+          <h1 class="hero-title">
+            Conhecer é uma <em>forma de cuidar.</em>
+          </h1>
+          <p class="hero-subtitle">
+            Informação confiável sobre prevenção, autoconhecimento do corpo, sinais de alteração e locais de atendimento no SUS. Baseado em dados oficiais do Ministério da Saúde e do Instituto Nacional de Câncer (INCA).
+          </p>
+          <div class="hero-actions">
+            <a href="#autoconhecimento" class="btn btn-primary">
+              Conheça seu corpo e sinais →
+            </a>
+            <a href="#quiz" class="btn btn-outline">
+              Testar no Quiz (10 Questões) ★
+            </a>
+          </div>
+
+          <!-- DADOS RÁPIDOS HERO -->
+          <div class="hero-stats-row">
+            <div class="hero-stat-item">
+              <h4 class="stat-number" data-target="78610">78.610</h4>
+              <p>Casos novos estimados/ano<br>(INCA 2026–2028)</p>
+            </div>
+            <div class="hero-stat-item">
+              <h4 class="stat-number" data-target="28" data-suffix="%">28%</h4>
+              <p>Preveníveis com hábitos<br>saudáveis de vida</p>
+            </div>
+            <div class="hero-stat-item">
+              <h4 class="stat-number" data-target="30" data-suffix="%">30%</h4>
+              <p>Dos novos tumores em<br>mulheres no Brasil</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-art-wrapper">
+            <img src="assets/hero-art.svg" alt="Arte Editorial Outubro Rosa" class="hero-illustration">
+
+            <!-- PÍLULAS FLUTUANTES EDITORIAL -->
+            <div class="floating-pill pill-top">
+              <span class="pill-icon">✨</span>
+              <span>INCA Triênio 2026–2028</span>
+            </div>
+            <div class="floating-pill pill-bottom">
+              <span class="pill-icon">🩺</span>
+              <span>SUS: Mamografia 50 a 74 anos</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DOS 4 CARDS EM DESTAQUE (MOCKUP: Informação que faz diferença) -->
+    <section class="section-features">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Pilares da Conscientização</span>
+          <h2 class="section-title">Informação que faz diferença</h2>
+          <p class="section-desc">Quatro eixos fundamentais para orientar sua rotina, tirar dúvidas e proteger quem você ama.</p>
+        </div>
+
+        <div class="feature-cards-grid">
+          <!-- CARD 1: PREVENÇÃO -->
+          <a href="#prevencao" class="feature-card">
+            <div class="feature-icon-box">🛡️</div>
+            <h3 class="feature-title">Prevenção</h3>
+            <p class="feature-text">Hábitos e escolhas no estilo de vida que ajudam a reduzir os riscos em até 28%.</p>
+            <span class="feature-arrow">→</span>
+          </a>
+
+          <!-- CARD 2: SINAIS -->
+          <a href="#sinais" class="feature-card">
+            <div class="feature-icon-box">🔍</div>
+            <h3 class="feature-title">Sinais</h3>
+            <p class="feature-text">Mudanças corporais que precisam de atenção médica e como conhecer seu corpo.</p>
+            <span class="feature-arrow">→</span>
+          </a>
+
+          <!-- CARD 3: CUIDADOS & SUS -->
+          <a href="#atendimento" class="feature-card">
+            <div class="feature-icon-box">🩺</div>
+            <h3 class="feature-title">Atendimento</h3>
+            <p class="feature-text">Onde buscar apoio, agendamento no SUS, Disque 136 e centros de referência.</p>
+            <span class="feature-arrow">→</span>
+          </a>
+
+          <!-- CARD 4: FONTES OFICIAIS -->
+          <a href="#dados" class="feature-card">
+            <div class="feature-icon-box">📖</div>
+            <h3 class="feature-title">Fontes</h3>
+            <p class="feature-text">Conteúdo rigorosamente baseado em estimativas oficiais do INCA e Ministério da Saúde.</p>
+            <span class="feature-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO DE DADOS ESTATÍSTICOS DO BRASIL (INCA 2026-2028 & 2023) -->
+    <section class="section-stats" id="dados">
+      <div class="container">
+        <div class="stats-hero-banner">
+          <div class="stats-banner-content">
+            <span style="font-size:0.75rem; text-transform:uppercase; letter-spacing:1.5px; color:#FBCFE8; font-weight:700;">Panorama Epidemiológico Oficial</span>
+            <h3>Câncer de Mama no Brasil: Dados que Inspiram Ação</h3>
+            <p>
+              No Brasil, o câncer de mama é o tipo de câncer mais frequente entre as mulheres (exceto os de pele não melanoma). Segundo o INCA, são estimados <strong>78.610 casos novos por ano</strong> no triênio de 2026 a 2028, o equivalente a <strong>71,57 casos novos a cada 100 mil mulheres</strong>. A doença representa cerca de <strong>30% de todos os novos casos de câncer em mulheres</strong> no país.
+            </p>
+            <div class="stats-banner-source">
+              <span>🏛️ Fonte Oficial: Instituto Nacional de Câncer (INCA) — Síntese de Resultados e Comentários (Estimativa 2026–2028)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- GRID DE 4 MÉTRICAS OFICIAIS -->
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-period">Triênio 2026–2028</div>
+            <div class="stat-number" data-target="78610">0</div>
+            <div class="stat-label">Casos novos estimados por ano</div>
+            <p class="stat-footnote">1º tumor mais frequente em mulheres no Brasil (INCA).</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-period">Incidência Relativa</div>
+            <div class="stat-number" data-target="71.57" data-float="true">0</div>
+            <div class="stat-label">Casos a cada 100 mil mulheres</div>
+            <p class="stat-footnote">Risco projetado nacionalmente para o período 2026–2028.</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-period">Mortalidade em 2023</div>
+            <div class="stat-number" data-target="20165">0</div>
+            <div class="stat-label">Óbitos femininos registrados</div>
+            <p class="stat-footnote">Risco de 18,59 óbitos / 100 mil mulheres (SIM/INCA).</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-period">Prevenção Primária</div>
+            <div class="stat-number" data-target="28" data-suffix="%">0%</div>
+            <div class="stat-label">Casos que podem ser evitados</div>
+            <p class="stat-footnote">Com alimentação saudável, exercício e controle de peso.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO PREVENÇÃO & FATORES DE RISCO -->
+    <section class="section-prevention" id="prevencao">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Cuidado &amp; Estilo de Vida</span>
+          <h2 class="section-title">Prevenção e Fatores de Risco</h2>
+          <p class="section-desc">A prevenção envolve reduzir fatores de risco modificáveis e adotar medidas protetoras no cotidiano.</p>
+        </div>
+
+        <div class="prevention-split">
+          <!-- FATORES MODIFICÁVEIS -->
+          <div class="risk-box">
+            <div class="risk-box-header">
+              <span class="risk-badge modificavel">Modificáveis</span>
+              <h4>Hábitos que Podemos Transformar</h4>
+            </div>
+            <ul class="risk-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Sedentarismo:</strong> Manter o corpo em movimento estimula o sistema imunológico e reduz processos inflamatórios.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Excesso de peso após a menopausa:</strong> O tecido adiposo acumula estrogênios que influenciam as células mamárias.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Consumo de bebidas alcoólicas:</strong> O álcool atua como fator de risco modificável comprovado cientificamente.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#166534" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Tabagismo e reposição hormonal sem acompanhamento:</strong> Exigem avaliação clínica contínua.</span>
+              </li>
+            </ul>
+            <div class="risk-callout">
+              🌿 <strong>Compromisso de Vida:</strong> Podem ser atenuados com escolhas conscientes e acompanhamento nas unidades de saúde.
+            </div>
+          </div>
+
+          <!-- FATORES NÃO MODIFICÁVEIS -->
+          <div class="risk-box">
+            <div class="risk-box-header">
+              <span class="risk-badge nao-modificavel">Não Modificáveis</span>
+              <h4>Aspectos Genéticos e Biológicos</h4>
+            </div>
+            <ul class="risk-list">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#991B1B" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                <span><strong>Idade:</strong> A incidência aumenta progressivamente com o avançar da idade, em especial após os 50 anos.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#991B1B" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                <span><strong>Histórico Familiar e Genética:</strong> Representam apenas 5% a 10% dos casos totais de câncer de mama.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#991B1B" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                <span><strong>Ciclo Reprodutivo:</strong> Primeira menstruação precoce (antes dos 12 anos) ou menopausa tardia (após os 55 anos).</span>
+              </li>
+            </ul>
+            <div class="risk-callout" style="background:#FFF1F2; border-color:#E11D48; color:#9F1239;">
+              💗 <strong>Empatia e Acolhimento:</strong> Fatores genéticos não são culpa da pessoa. Exigem apenas vigilância e exames regulares.
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 HÁBITOS DE PROTEÇÃO RECOMENDADOS PELO INCA -->
+        <div class="habits-grid">
+          <div class="habit-card">
+            <div class="habit-icon">🏃‍♀️</div>
+            <div class="habit-info">
+              <h5>Atividade Física Regular</h5>
+              <p>O INCA classifica o exercício como medida de prevenção primária indispensável.</p>
+            </div>
+          </div>
+
+          <div class="habit-card">
+            <div class="habit-icon">⚖️</div>
+            <div class="habit-info">
+              <h5>Peso Corporal Saudável</h5>
+              <p>Evitar o sobrepeso pós-menopausa reduz a produção periférica de estrogênios.</p>
+            </div>
+          </div>
+
+          <div class="habit-card">
+            <div class="habit-icon">🥗</div>
+            <div class="habit-info">
+              <h5>Alimentação Equilibrada</h5>
+              <p>Priorizar alimentos in natura, fibras, frutas e hortaliças, evitando ultraprocessados.</p>
+            </div>
+          </div>
+
+          <div class="habit-card">
+            <div class="habit-icon">🚫</div>
+            <div class="habit-info">
+              <h5>Evitar Bebidas Alcoólicas</h5>
+              <p>O consumo alcoólico é um fator de risco modificável de grande relevância.</p>
+            </div>
+          </div>
+
+          <div class="habit-card">
+            <div class="habit-icon">🤱</div>
+            <div class="habit-info">
+              <h5>Amamentar pelo Maior Tempo</h5>
+              <p>A amamentação promove a diferenciação celular dos ductos mamários e protege a mulher.</p>
+            </div>
+          </div>
+
+          <div class="habit-card">
+            <div class="habit-icon">🚭</div>
+            <div class="habit-info">
+              <h5>Não Fumar</h5>
+              <p>A cessação do tabagismo traz proteção ampla e sistêmica à integridade celular.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO NOVA: CONHECIMENTO PRÓPRIO DO CORPO & AUTOCUIDADO -->
+    <section class="section-autoconhecimento" id="autoconhecimento" style="padding:80px 0; background:linear-gradient(180deg, #FFF 0%, var(--rose-50) 100%);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Autonomia &amp; Cuidado</span>
+          <h2 class="section-title">Conhecimento Próprio do Corpo</h2>
+          <p class="section-desc">Estar atenta ao próprio corpo no dia a dia é o primeiro passo para perceber qualquer alteração precoce.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(310px, 1fr)); gap:24px; margin-bottom:40px;">
+          <div style="background:#FFF; border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:32px; box-shadow:var(--shadow-sm);">
+            <div style="font-size:2rem; margin-bottom:12px;">🪞</div>
+            <h4 style="font-family:var(--font-serif); font-size:1.35rem; color:var(--wine-deep); margin-bottom:8px;">1. Em Frente ao Espelho</h4>
+            <p style="font-size:0.9rem; color:var(--text-body); line-height:1.6;">
+              Com os braços relaxados, depois elevados e depois apoiados na cintura: observe o contorno, a simetria, se há abaulamentos, retrações da pele ou alterações no formato dos mamilos.
+            </p>
+          </div>
+
+          <div style="background:#FFF; border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:32px; box-shadow:var(--shadow-sm);">
+            <div style="font-size:2rem; margin-bottom:12px;">🚿</div>
+            <h4 style="font-family:var(--font-serif); font-size:1.35rem; color:var(--wine-deep); margin-bottom:8px;">2. Durante o Banho</h4>
+            <p style="font-size:0.9rem; color:var(--text-body); line-height:1.6;">
+              Com a pele ensaboada, levante o braço esquerdo e coloque a mão atrás da cabeça. Com as pontas dos dedos da mão direita estendidos, realize movimentos circulares suaves por toda a mama e axila. Repita do outro lado.
+            </p>
+          </div>
+
+          <div style="background:#FFF; border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:32px; box-shadow:var(--shadow-sm);">
+            <div style="font-size:2rem; margin-bottom:12px;">🛏️</div>
+            <h4 style="font-family:var(--font-serif); font-size:1.35rem; color:var(--wine-deep); margin-bottom:8px;">3. Ao Deitar-se</h4>
+            <p style="font-size:0.9rem; color:var(--text-body); line-height:1.6;">
+              Coloque uma toalha sob o ombro direito e apalpe a mama direita com a mão esquerda. Sinta se há caroços endurecidos ou texturas espessas, sem esquecer a região da clavícula e axilar.
+            </p>
+          </div>
+        </div>
+
+        <div style="background:var(--rose-100); border-left:4px solid var(--rose-600); border-radius:0 var(--radius-md) var(--radius-md) 0; padding:20px 24px;">
+          <p style="font-size:0.92rem; color:var(--rose-950); line-height:1.6;">
+            <strong>Lembrete Fundamental da Sociedade Brasileira de Mastologia (SBM) e do INCA:</strong> A auto-observação estimula o conhecimento do próprio corpo, mas <strong>não substitui a mamografia de rotina</strong> nem a consulta ginecológica periódica. O diagnóstico de lesões muito pequenas ocorre antes de serem palpáveis, somente por meio de exames de imagem.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO SINAIS DE ALERTA -->
+    <section class="section-signs" id="sinais">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Atenção Médica Oportuna</span>
+          <h2 class="section-title">Sinais que Merecem Avaliação Médica</h2>
+          <p class="section-desc">Identificar sinais precoces salva vidas. Fique atenta a qualquer uma das seguintes manifestações descritas pelo INCA:</p>
+        </div>
+
+        <div class="signs-grid">
+          <div class="sign-card">
+            <div class="sign-num">01</div>
+            <h5>Nódulo ou Caroço Endurecido</h5>
+            <p>Especialmente se for fixo, endurecido, indolor ou apresentar crescimento com o passar dos dias.</p>
+          </div>
+
+          <div class="sign-card">
+            <div class="sign-num">02</div>
+            <h5>Pele com Aspecto de "Casca de Laranja"</h5>
+            <p>Retração, repuxamento, vermelhidão ou áreas rugosas na superfície da mama.</p>
+          </div>
+
+          <div class="sign-card">
+            <div class="sign-num">03</div>
+            <h5>Alterações no Mamilo</h5>
+            <p>Inversão súbita, retração ou desvio na direção natural do bico da mama.</p>
+          </div>
+
+          <div class="sign-card">
+            <div class="sign-num">04</div>
+            <h5>Saída Espontânea de Secreção</h5>
+            <p>Líquido saindo sem apertar de um dos mamilos, principalmente se for transparente ou com sangue.</p>
+          </div>
+
+          <div class="sign-card">
+            <div class="sign-num">05</div>
+            <h5>Nódulos nas Axilas ou Pescoço</h5>
+            <p>Gânglios ou caroços palpáveis na região axilar ou cervical que permanecem por várias semanas.</p>
+          </div>
+
+          <div class="sign-card">
+            <div class="sign-num">06</div>
+            <h5>Inchaço e Aumento Assimétrico</h5>
+            <p>Edema persistente ou alteração de volume acentuada em apenas uma das mamas.</p>
+          </div>
+        </div>
+
+        <div class="signs-notice">
+          <div class="notice-icon">🩺</div>
+          <div>
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; margin-bottom:4px; color:var(--wine-deep);">Mensagem de Responsabilidade Médica</h4>
+            <p>
+              Perceber uma alteração <strong>não significa ter câncer</strong>, mas é motivo para procurar atendimento em uma Unidade Básica de Saúde (UBS). A maior parte dos nódulos tem natureza benigna (cistos, fibroadenomas), mas somente a investigação especializada com exames pode confirmar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO NOVA: LOCAIS ONDE BUSCAR INFORMAÇÕES E ATENDIMENTO -->
+    <section class="section-atendimento" id="atendimento" style="padding:80px 0; background:#FFFFFF;">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Rede de Cuidado e Acolhimento</span>
+          <h2 class="section-title">Onde Buscar Informações e Atendimento</h2>
+          <p class="section-desc">O SUS e as redes de apoio oferecem atendimento 100% gratuito, exames e acolhimento em todo o Brasil.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px; margin-bottom:40px;">
+          <!-- UBS -->
+          <div style="background:var(--rose-50); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:32px;">
+            <div style="font-size:2.2rem; margin-bottom:12px;">🏥</div>
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; color:var(--wine-deep); margin-bottom:8px;">Unidades Básicas de Saúde (UBS / Postos)</h4>
+            <p style="font-size:0.88rem; color:var(--text-body); line-height:1.6; margin-bottom:16px;">
+              A porta de entrada do SUS. Procure a UBS mais próxima do seu bairro para consulta médica inicial, exame clínico das mamas e agendamento de mamografia.
+            </p>
+            <span style="font-size:0.8rem; font-weight:700; color:var(--rose-700);">Atendimento Gratuito e Universal</span>
+          </div>
+
+          <!-- DISQUE SAÚDE 136 -->
+          <div style="background:var(--rose-50); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:32px;">
+            <div style="font-size:2.2rem; margin-bottom:12px;">📞</div>
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; color:var(--wine-deep); margin-bottom:8px;">Disque Saúde 136 (Ministério da Saúde)</h4>
+            <p style="font-size:0.88rem; color:var(--text-body); line-height:1.6; margin-bottom:16px;">
+              Central telefônica pública, gratuita e disponível 24 horas por dia para tirar dúvidas, saber onde fazer mamografia na sua cidade e consultar direitos.
+            </p>
+            <span style="font-size:0.8rem; font-weight:700; color:var(--rose-700);">Ligue 136 de qualquer telefone</span>
+          </div>
+
+          <!-- MEU SUS DIGITAL -->
+          <div style="background:var(--rose-50); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:32px;">
+            <div style="font-size:2.2rem; margin-bottom:12px;">📱</div>
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; color:var(--wine-deep); margin-bottom:8px;">Aplicativo Meu SUS Digital</h4>
+            <p style="font-size:0.88rem; color:var(--text-body); line-height:1.6; margin-bottom:16px;">
+              Aplicativo oficial do Ministério da Saúde para celular. Acompanhe resultados de exames, histórico de consultas, Cartão SUS e localização de postos.
+            </p>
+            <a href="https://meususdigital.saude.gov.br" target="_blank" rel="noopener noreferrer" style="font-size:0.8rem; font-weight:700; color:var(--rose-700); text-decoration:underline;">Acessar Meu SUS Digital ↗</a>
+          </div>
+
+          <!-- CACON / UNACON -->
+          <div style="background:var(--rose-50); border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:32px;">
+            <div style="font-size:2.2rem; margin-bottom:12px;">🎗️</div>
+            <h4 style="font-family:var(--font-serif); font-size:1.3rem; color:var(--wine-deep); margin-bottom:8px;">Centros de Referência (CACON &amp; UNACON)</h4>
+            <p style="font-size:0.88rem; color:var(--text-body); line-height:1.6; margin-bottom:16px;">
+              Centros de Alta Complexidade Oncológica e hospitais de referência credenciados pelo SUS (como INCA no RJ, Hospital de Amor e redes estaduais) para suporte completo.
+            </p>
+            <a href="https://www.gov.br/inca/pt-br/assuntos/gestor-e-profissional-de-saude/rede-de-atencao-a-pessoa-com-cancer" target="_blank" rel="noopener noreferrer" style="font-size:0.8rem; font-weight:700; color:var(--rose-700); text-decoration:underline;">Rede Oncológica SUS ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO QUIZ INTERATIVO (EXATAMENTE 10 QUESTÕES OFICIAIS) -->
+    <section class="section-quiz" id="quiz">
+      <div class="container">
+        <div class="quiz-layout-grid">
+          <!-- CARD LATERAL ESQUERDO DO MOCKUP -->
+          <div class="quiz-intro-box">
+            <div class="quiz-intro-badge">🧠 QUIZ ESCOLAR OFICIAL</div>
+            <h2 class="quiz-intro-title">Teste seus conhecimentos!</h2>
+            <p class="quiz-intro-desc">
+              Você sabe identificar os sinais de alerta e conhece as formas de prevenção do câncer de mama? Responda às <strong>10 questões exclusivas</strong> baseadas nos relatórios oficiais do INCA e Ministério da Saúde. Ao final, veja sua nota, feedback educativo e posição no Ranking Escolar!
+            </p>
+
+            <div style="background:var(--rose-50); border:1px solid var(--rose-200); border-radius:var(--radius-md); padding:20px; margin-bottom:20px;">
+              <h4 style="font-family:var(--font-serif); font-size:1.2rem; color:var(--wine-deep); margin-bottom:6px;">Quiz Outubro Rosa</h4>
+              <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:14px;">
+                10 perguntas com 4 alternativas, correção instantânea e pontuação gravada em banco de dados.
+              </p>
+              <a href="#quiz-card-anchor" id="start-quiz-cta" class="btn btn-primary" style="width:100%;">
+                Começar quiz (10 Perguntas) →
+              </a>
+            </div>
+
+            <div class="quiz-meta-pills">
+              <span>🎯 10 perguntas</span>
+              <span>•</span>
+              <span>📚 4 Alternativas</span>
+              <span>•</span>
+              <span>🏆 Pódio no Ranking</span>
+            </div>
+          </div>
+
+          <!-- CARD INTERATIVO DO QUIZ (DIREITA) -->
+          <div class="quiz-card" id="quiz-card-anchor">
+            <canvas id="confetti-canvas"></canvas>
+
+            <!-- TELA ATIVA DE PERGUNTAS -->
+            <div id="quiz-active-view">
+              <div class="quiz-header-bar">
+                <span class="quiz-progress-text" id="quiz-progress-text">Pergunta 1 de 10</span>
+                <span class="quiz-score-badge" id="quiz-score-badge">0 pts</span>
+              </div>
+
+              <div class="quiz-progress-track">
+                <div class="quiz-progress-fill" id="quiz-progress-fill"></div>
+              </div>
+
+              <span class="quiz-category-tag" id="quiz-category-tag">Estatísticas Nacionais</span>
+              <h3 class="quiz-question-text" id="quiz-question-text">
+                Carregando pergunta oficial do INCA...
+              </h3>
+
+              <!-- LISTA DE 4 ALTERNATIVAS -->
+              <div class="quiz-options-list" id="quiz-options-list">
+                <!-- Inserido dinamicamente pelo quiz.js -->
+              </div>
+
+              <!-- CAIXA DE EXPLICAÇÃO EDUCATIVA EXPANSÍVEL -->
+              <div class="quiz-explanation-box" id="quiz-explanation-box"></div>
+
+              <!-- RODAPÉ DE AÇÃO -->
+              <div class="quiz-actions-footer">
+                <button class="btn btn-primary" id="quiz-next-btn" style="display:none;">
+                  Próxima pergunta →
+                </button>
+              </div>
+            </div>
+
+            <!-- TELA DE RESULTADOS E REGISTRO NO RANKING -->
+            <div class="quiz-results-card" id="quiz-results-card">
+              <div class="result-celebration-badge">🏆</div>
+              <h3 class="result-title">Quiz Concluído!</h3>
+              <div class="result-score-highlight" id="final-score-val">250 Pontos</div>
+              <p class="result-message" id="result-message-text">
+                Parabéns! Você concluiu as 10 questões oficiais sobre prevenção e detecção precoce do câncer de mama.
+              </p>
+
+              <!-- FORMULÁRIO DE GRAVAÇÃO NO BANCO DE DADOS -->
+              <div class="ranking-register-box">
+                <h4>Inscreva-se no Ranking Escolar</h4>
+                <p>Grave seu resultado no banco de dados para ver sua colocação no pódio e na tabela:</p>
+
+                <form id="ranking-register-form">
+                  <div class="form-group">
+                    <label class="form-label" for="ranking-nome-input">Seu Nome ou Apelido:*</label>
+                    <input type="text" class="form-control" id="ranking-nome-input" placeholder="Ex: Beatriz Albuquerque" required>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label">Você é Aluno(a) ou Professor(a)?</label>
+                    <div class="role-selector-group">
+                      <button type="button" class="role-btn active" data-role="ALUNO">Aluno(a)</button>
+                      <button type="button" class="role-btn" data-role="PROFESSOR">Professor(a)</button>
+                    </div>
+                    <input type="hidden" id="ranking-role-input" value="ALUNO">
+                  </div>
+
+                  <div class="form-group" id="turma-input-group">
+                    <label class="form-label" id="turma-input-label" for="ranking-turma-input">Sua Sala / Turma (Ex: 3º Ano A - Informática):*</label>
+                    <input type="text" class="form-control" id="ranking-turma-input" placeholder="Ex: 3º Ano A - Informática" required>
+                  </div>
+
+                  <button type="submit" class="btn btn-primary" id="ranking-submit-btn" style="width:100%; margin-top:8px;">
+                    Salvar Pontos e Ver Minha Posição no Ranking ✦
+                  </button>
+
+                  <!-- STATUS DE CLASSIFICAÇÃO IMEDIATA -->
+                  <div id="ranking-submit-status" style="display:none;"></div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO RANKING ESCOLAR COM BANCO DE DADOS -->
+    <section class="section-ranking" id="ranking">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Gamificação &amp; Conquistas</span>
+          <h2 class="section-title">Ranking Escolar Rosa em Alerta</h2>
+          <p class="section-desc">Classificação auditável e em tempo real dos estudantes e docentes que se destacaram no quiz educativo de 10 questões.</p>
+        </div>
+
+        <!-- PÓDIO TOP 3 (ATUALIZADO AUTOMATICAMENTE PELO BANCO DE DADOS) -->
+        <div class="podium-container">
+          <!-- 2º LUGAR -->
+          <div class="podium-step second">
+            <div class="podium-avatar-wrapper">
+              <span class="podium-crown">🥈</span>
+              <div class="podium-avatar">--</div>
+            </div>
+            <div class="podium-participant-name">Aguardando 2º</div>
+            <span class="podium-role-tag aluno">Disponível</span>
+            <div class="podium-classroom">Faça o quiz para entrar!</div>
+            <div class="podium-points">0 pts</div>
+            <div class="pedestal">2º</div>
+          </div>
+
+          <!-- 1º LUGAR -->
+          <div class="podium-step first">
+            <div class="podium-avatar-wrapper">
+              <span class="podium-crown">👑</span>
+              <div class="podium-avatar">--</div>
+            </div>
+            <div class="podium-participant-name">Aguardando 1º</div>
+            <span class="podium-role-tag aluno">Disponível</span>
+            <div class="podium-classroom">Faça o quiz para entrar!</div>
+            <div class="podium-points">0 pts</div>
+            <div class="pedestal">1º</div>
+          </div>
+
+          <!-- 3º LUGAR -->
+          <div class="podium-step third">
+            <div class="podium-avatar-wrapper">
+              <span class="podium-crown">🥉</span>
+              <div class="podium-avatar">--</div>
+            </div>
+            <div class="podium-participant-name">Aguardando 3º</div>
+            <span class="podium-role-tag aluno">Disponível</span>
+            <div class="podium-classroom">Faça o quiz para entrar!</div>
+            <div class="podium-points">0 pts</div>
+            <div class="pedestal">3º</div>
+          </div>
+        </div>
+
+        <!-- TOOLBAR DE FILTROS E BUSCA -->
+        <div class="ranking-toolbar">
+          <div class="filter-pills-group">
+            <button class="filter-btn active" data-role="TODOS">Todos os Participantes</button>
+            <button class="filter-btn" data-role="ALUNO">Apenas Alunos (com sala)</button>
+            <button class="filter-btn" data-role="PROFESSOR">Apenas Professores</button>
+          </div>
+
+          <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" class="search-input" id="ranking-search-input" placeholder="Buscar por aluno, professor ou sala...">
+          </div>
+        </div>
+
+        <!-- TABELA DE CLASSIFICAÇÃO -->
+        <div class="ranking-table-card">
+          <table class="ranking-table">
+            <thead>
+              <tr>
+                <th>Posição</th>
+                <th>Participante</th>
+                <th>Categoria / Sala Escolar</th>
+                <th>Desempenho</th>
+                <th style="text-align:right;">Pontuação</th>
+              </tr>
+            </thead>
+            <tbody id="ranking-table-body">
+              <!-- Inserido dinamicamente pelo ranking.js -->
+            </tbody>
+          </table>
+
+          <div id="ranking-empty-state" style="display:none; text-align:center; padding:40px; color:var(--text-light);">
+            Nenhum participante encontrado com os filtros aplicados.
+          </div>
+
+          <div class="ranking-footer-actions">
+            <span id="ranking-total-count">Carregando participantes...</span>
+            <button class="btn-export-csv" id="btn-export-csv">
+              <span>📥</span> Exportar Relatório CSV para a Coordenação
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO COMUNIDADE & MURAL DE APOIO -->
+    <section class="section-community" id="comunidade" style="padding:80px 0; background:var(--rose-100);">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Rede de Solidariedade</span>
+          <h2 class="section-title">Mural Escolar de Apoio &amp; Dúvidas</h2>
+          <p class="section-desc">Um espaço acolhedor onde alunos e professores compartilham mensagens de incentivo, tiram dúvidas e multiplicam o autocuidado.</p>
+        </div>
+
+        <!-- GRID DE MENSAGENS -->
+        <div id="community-posts-container" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(320px, 1fr)); gap:24px; margin-bottom:40px;">
+          <!-- Inserido dinamicamente pelo community.js -->
+        </div>
+
+        <!-- FORMULÁRIO PARA DEIXAR MENSAGEM NO MURAL -->
+        <div style="background:#FFF; border:1px solid var(--border-subtle); border-radius:var(--radius-lg); padding:36px; max-width:760px; margin:0 auto; box-shadow:var(--shadow-md);">
+          <h4 style="font-family:var(--font-serif); font-size:1.4rem; color:var(--wine-deep); margin-bottom:8px;">Deixe sua Mensagem de Conscientização</h4>
+          <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:20px;">
+            Compartilhe um aprendizado do projeto, homenageie uma pessoa querida ou deixe uma pergunta sobre saúde.
+          </p>
+
+          <form id="community-new-post-form">
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+              <div>
+                <label class="form-label" for="comm-author-input">Seu Nome:*</label>
+                <input type="text" class="form-control" id="comm-author-input" placeholder="Ex: Clara Mendes" required>
+              </div>
+              <div>
+                <label class="form-label" for="comm-role-select">Perfil:*</label>
+                <select class="form-control" id="comm-role-select">
+                  <option value="ALUNO">Aluno(a)</option>
+                  <option value="PROFESSOR">Professor(a)</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+              <div>
+                <label class="form-label" for="comm-turma-input">Sua Sala / Disciplina:*</label>
+                <input type="text" class="form-control" id="comm-turma-input" placeholder="Ex: 3º Ano A - Informática" required>
+              </div>
+              <div>
+                <label class="form-label" for="comm-category-select">Tipo de Post:*</label>
+                <select class="form-control" id="comm-category-select">
+                  <option value="CONSCIENTIZACAO">Mensagem de Conscientização</option>
+                  <option value="APOIO">Palavra de Apoio / Carinho</option>
+                  <option value="DUVIDA">Dúvida sobre Saúde</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="comm-title-input">Título da Postagem:*</label>
+              <input type="text" class="form-control" id="comm-title-input" placeholder="Ex: Conversando com minha família sobre o rastreamento" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="comm-message-input">Sua Mensagem:*</label>
+              <textarea class="form-control" id="comm-message-input" rows="3" placeholder="Escreva aqui suas palavras de conscientização e apoio..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" id="comm-submit-btn">
+              Publicar no Mural ✦
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- BANNER MOTIVACIONAL DO MOCKUP ("Você não está sozinha") -->
+    <section class="section-banner">
+      <div class="container">
+        <div class="editorial-banner-box">
+          <div class="banner-left">
+            <div class="banner-heart-icon">💓</div>
+            <div class="banner-info">
+              <h4>Você não está sozinha.</h4>
+              <p>O cuidado começa com informação confiável e o apoio de toda a comunidade.</p>
+            </div>
+          </div>
+          <div class="banner-handwritten">
+            Juntas por mais saúde ♡
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- RODAPÉ INSTITUCIONAL LUXO -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h4>Rosa em Alerta</h4>
+          <p>Informação, cuidado e prevenção do câncer de mama feminino.</p>
+        </div>
+
+        <div class="footer-partners">
+          <div class="partner-seal">
+            <span style="font-size:0.7rem; color:#FBCFE8;">CONTEÚDO BASEADO NAS ORIENTAÇÕES DO</span>
+            <strong>INCA</strong>
+          </div>
+          <div class="partner-seal">
+            <span style="font-size:0.7rem; color:#FBCFE8;">MINISTÉRIO DA</span>
+            <strong>SAÚDE</strong>
+          </div>
+          <div class="partner-seal">
+            <span style="font-size:0.7rem; color:#FBCFE8;">GOVERNO FEDERAL</span>
+            <strong>BRASIL</strong>
+          </div>
+        </div>
+
+        <div class="footer-sources">
+          <p>Acesse as fontes oficiais:</p>
+          <a href="https://www.gov.br/inca" target="_blank" rel="noopener noreferrer" class="footer-link-inca">
+            gov.br/inca ↗
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Este site tem caráter exclusivamente educativo e não substitui a consulta médica presencial. • Desenvolvido para o Hackathon Escolar Outubro Rosa.</p>
+      </div>
+
+      <!-- CRÉDITOS OFICIAIS DA EQUIPE ROXA -->
+      <div class="team-credits-section" style="margin-top: 36px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.12); text-align: center;">
+        <div style="display: inline-block; background: rgba(255, 255, 255, 0.07); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: var(--radius-md); padding: 24px 30px; max-width: 800px; text-align: left; width: 100%;">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.12); padding-bottom: 10px;">
+            <h5 style="font-family: var(--font-serif); font-size: 1.25rem; color: #FFF; margin: 0;">
+              💜 Equipe Roxa — Desenvolvedora do Projeto
+            </h5>
+            <span style="font-size: 0.75rem; background: var(--rose-600); color: #FFF; padding: 4px 12px; border-radius: var(--radius-full); font-weight: 700; letter-spacing: 0.5px;">
+              Hackathon Escolar
+            </span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; font-size: 0.88rem; color: #FCE7EC;">
+            <div>
+              <span style="color: #FBCFE8; font-weight: 700;">🎨 UI / UX Designer:</span><br>
+              Gustavo
+            </div>
+            <div>
+              <span style="color: #FBCFE8; font-weight: 700;">🔬 Pesquisadora:</span><br>
+              Talitta
+            </div>
+            <div style="grid-column: 1 / -1;">
+              <span style="color: #FBCFE8; font-weight: 700;">💻 Desenvolvedores:</span><br>
+              Rafael Mendes, Caio Caetano, Gabriel Coleto e Pablo Pereira
+            </div>
+            <div style="grid-column: 1 / -1; margin-top: 4px; padding-top: 8px; border-top: 1px dashed rgba(255, 255, 255, 0.15); font-size: 0.78rem; color: #F9A8D4;">
+              <em>Observação de Participação:</em> Fabricio não contribuiu.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AGENTE DE IA (DRA. ROSA) FLUTUANTE -->
+  <button class="chat-launcher-btn" id="chat-launcher-btn" aria-label="Abrir Chat da Dra. Rosa">
+    <div class="chat-pulse-ring"></div>
+    <div class="chat-launcher-avatar">🌸</div>
+    <span>Dra. Rosa IA</span>
+  </button>
+
+  <!-- WIDGET DRAWER DO CHATBOT -->
+  <div class="chat-widget-box" id="chat-widget-box">
+    <!-- CABEÇALHO DO CHAT -->
+    <div class="chat-widget-header">
+      <div class="chat-header-profile">
+        <div class="chat-doctor-avatar">🩺</div>
+        <div class="chat-header-titles">
+          <h4>Dra. Rosa</h4>
+          <div class="chat-status-pill">
+            <span class="status-dot"></span>
+            <span>Online • Dados INCA Oficial</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-header-tools">
+        <button class="chat-tool-btn" id="chat-voice-btn" title="Ativar Leitura por Voz">🔊</button>
+        <button class="chat-tool-btn" id="chat-close-btn" title="Fechar Chat">✕</button>
+      </div>
+    </div>
+
+    <!-- MENSAGENS -->
+    <div class="chat-messages-container" id="chat-messages-container">
+      <div class="chat-message-row bot">
+        <div class="chat-msg-avatar">🌸</div>
+        <div class="chat-msg-bubble">
+          <p>Olá! Sou a <strong>Dra. Rosa</strong>, consultora educacional do projeto <em>Rosa em Alerta</em>.</p>
+          <p>Estou conectada aos relatórios oficiais do INCA e pronta para esclarecer suas dúvidas sobre prevenção, sintomas, mamografia no SUS e estatísticas. Como posso te orientar hoje?</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHIPS DE PERGUNTAS SUGERIDAS -->
+    <div class="chat-quick-chips">
+      <button class="quick-chip" data-query="Quais os números oficiais do INCA no Brasil?">📊 Dados INCA</button>
+      <button class="quick-chip" data-query="Como prevenir 28% dos casos de câncer de mama?">🌿 Como Prevenir?</button>
+      <button class="quick-chip" data-query="Quais são os sinais suspeitos que exigem médico?">🔍 Sinais Suspeitos</button>
+      <button class="quick-chip" data-query="Onde buscar atendimento no SUS e pelo Disque 136?">🏥 Onde ir no SUS?</button>
+      <button class="quick-chip" data-query="Quais os mitos mais comuns sobre sutiã e desodorante?">💡 Mitos e Verdades</button>
+    </div>
+
+    <!-- FORMULÁRIO DE DIGITAÇÃO -->
+    <form class="chat-input-bar" id="chat-input-form">
+      <input type="text" class="chat-input" id="chat-input-field" placeholder="Digite sua pergunta sobre saúde..." autocomplete="off">
+      <button type="submit" class="chat-send-btn" aria-label="Enviar mensagem">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+      </button>
+    </form>
+  </div>
+
+  <!-- SCRIPTS DA APLICAÇÃO -->
+  <script src="js/main.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/ranking.js"></script>
+  <script src="js/community.js"></script>
+  <script src="js/chat.js"></script>
+</body>
+</html>

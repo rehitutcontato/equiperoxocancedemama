@@ -1,0 +1,30 @@
+{
+  "name": "rosa-em-alerta",
+  "version": "1.0.0",
+  "description": "Plataforma institucional de alta performance para conscientização sobre o câncer de mama (Outubro Rosa) com Quiz, Ranking Escolar com banco de dados e Agente de IA com Gemini.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rehitutcontato/equiperoxocancedemama.git"
+  },
+  "keywords": [
+    "outubro-rosa",
+    "saude-da-mulher",
+    "inca",
+    "quiz",
+    "ranking",
+    "gemini-ai",
+    "hackathon"
+  ],
+  "author": "Equipe Rosa em Alerta",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}

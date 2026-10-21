@@ -1,0 +1,172 @@
+[
+  {
+    "id": "q1",
+    "category": "Estatísticas Nacionais",
+    "difficulty": "Média",
+    "points": 25,
+    "question": "Segundo o INCA, quantos casos novos de câncer de mama feminina são estimados por ano no Brasil para o triênio 2026–2028?",
+    "options": [
+      "78.610 casos novos por ano",
+      "52.340 casos novos por ano",
+      "95.800 casos novos por ano",
+      "34.120 casos novos por ano"
+    ],
+    "correct": 0,
+    "explanation": "Segundo dados oficiais do INCA (Estimativa 2026–2028), são estimados 78.610 casos novos a cada ano no Brasil, correspondendo a um risco de 71,57 casos a cada 100 mil mulheres.",
+    "source": "INCA — Síntese de Resultados e Comentários (Estimativa 2026–2028)",
+    "sourceUrl": "https://www.gov.br/inca/pt-br/assuntos/cancer/numeros/estimativa/sintese-de-resultados-e-comentarios"
+  },
+  {
+    "id": "q2",
+    "category": "Epidemiologia Feminina",
+    "difficulty": "Fácil",
+    "points": 20,
+    "question": "O câncer de mama é o tipo de câncer mais frequente entre mulheres no Brasil?",
+    "options": [
+      "Sim, é o 1º mais incidente (exceto pele não melanoma) e representa cerca de 30% dos casos novos femininos",
+      "Não, fica atrás do câncer de tireoide e colo do útero",
+      "Não, é apenas o quarto tipo mais incidente",
+      "Apenas na região Norte do país"
+    ],
+    "correct": 0,
+    "explanation": "O câncer de mama ocupa a primeira posição em incidência feminina no Brasil (excluindo os tumores de pele não melanoma), correspondendo a quase 1 em cada 3 casos novos diagnosticados em mulheres.",
+    "source": "INCA — Introdução às Estimativas de Câncer",
+    "sourceUrl": "https://www.gov.br/inca/pt-br/assuntos/cancer/numeros/estimativa/introducao"
+  },
+  {
+    "id": "q3",
+    "category": "Estatísticas de Mortalidade",
+    "difficulty": "Média",
+    "points": 25,
+    "question": "Em 2023, quantas mortes por câncer de mama feminina foram registradas no Brasil?",
+    "options": [
+      "20.165 óbitos registrados",
+      "12.800 óbitos registrados",
+      "31.450 óbitos registrados",
+      "8.920 óbitos registrados"
+    ],
+    "correct": 0,
+    "explanation": "No ano de 2023, foram registrados 20.165 óbitos por câncer de mama feminina no Brasil, o que corresponde a um risco de 18,59 mortes por 100 mil mulheres, evidenciando a urgência do diagnóstico precoce.",
+    "source": "INCA / SIM — Sistema de Informações sobre Mortalidade",
+    "sourceUrl": "https://www.gov.br/inca/pt-br/assuntos/cancer/numeros/estimativa/sintese-de-resultados-e-comentarios"
+  },
+  {
+    "id": "q4",
+    "category": "Incidência Populacional",
+    "difficulty": "Difícil",
+    "points": 30,
+    "question": "Qual é a taxa estimada de incidência de casos novos a cada 100 mil mulheres no Brasil (triênio 2026–2028)?",
+    "options": [
+      "71,57 casos novos por 100 mil mulheres",
+      "45,20 casos novos por 100 mil mulheres",
+      "102,40 casos novos por 100 mil mulheres",
+      "28,00 casos novos por 100 mil mulheres"
+    ],
+    "correct": 0,
+    "explanation": "A taxa bruta de incidência projetada pelo INCA para o triênio 2026–2028 é de 71,57 novos casos por 100 mil mulheres em território brasileiro.",
+    "source": "INCA — Panorama e Incidência de Câncer de Mama",
+    "sourceUrl": "https://www.gov.br/inca/pt-br/assuntos/gestor-e-profissional-de-saude/controle-do-cancer-de-mama/dados-e-numeros/incidencia"
+  },
+  {
+    "id": "q5",
+    "category": "Prevenção Primária",
+    "difficulty": "Média",
+    "points": 25,
+    "question": "Segundo o INCA, que proporção de casos de câncer de mama pode ser evitada com hábitos como atividade física, peso saudável e alimentação equilibrada?",
+    "options": [
+      "Cerca de 28% dos casos podem ser evitados",
+      "Apenas 5% dos casos",
+      "Mais de 95% de todos os casos",
+      "Exatamente 50% dos casos"
+    ],
+    "correct": 0,
+    "explanation": "O INCA estima que a prática regular de exercícios, o controle de peso corporal e uma alimentação nutritiva podem prevenir até 28% dos casos de câncer de mama.",
+    "source": "Informe Técnico INCA — Controle e Prevenção",
+    "sourceUrl": "https://ninho.inca.gov.br/jspui/bitstream/123456789/15225/1/Informe-INCA-436-11-Cancer-de-mama.pdf"
+  },
+  {
+    "id": "q6",
+    "category": "Estilo de Vida e Fatores Modificáveis",
+    "difficulty": "Fácil",
+    "points": 20,
+    "question": "Quais são considerados fatores protetores modificáveis fundamentais segundo os protocolos do Ministério da Saúde e INCA?",
+    "options": [
+      "Praticar atividade física regular, manter peso saudável, ter alimentação equilibrada e evitar bebidas alcoólicas",
+      "Fazer suplementação com doses maciças de vitaminas sem prescrição",
+      "Evitar o uso de desodorantes antitranspirantes",
+      "Dormir mais de 12 horas por dia e não tomar sol"
+    ],
+    "correct": 0,
+    "explanation": "Os principais fatores modificáveis cientificamente comprovados envolvem movimentar o corpo regularmente, peso controlado após a menopausa, boa alimentação e cessação do álcool e tabaco.",
+    "source": "INCA — Ações de Prevenção e Controle",
+    "sourceUrl": "https://www.gov.br/inca/pt-br/assuntos/gestor-e-profissional-de-saude/controle-do-cancer-de-mama/acoes/prevencao"
+  },
+  {
+    "id": "q7",
+    "category": "Fatores Protetores",
+    "difficulty": "Fácil",
+    "points": 20,
+    "question": "A amamentação pode ter efeito protetor contra o câncer de mama feminino?",
+    "options": [
+      "Sim, amamentar é um fator protetor comprovado e deve ser incentivado pelo maior tempo possível",
+      "Não, a amamentação não tem nenhuma relação com a saúde celular das mamas",
+      "Apenas nos primeiros 15 dias após o parto",
+      "Apenas se a mulher tiver mais de 45 anos"
+    ],
+    "correct": 0,
+    "explanation": "Sim! O ato de amamentar promove a renovação e maturação das células dos ductos mamários e reduz o número de ciclos ovulatórios ao longo da vida, funcionando como fator protetor consistente.",
+    "source": "INCA / OMS — Fatores Protetores da Saúde da Mulher",
+    "sourceUrl": "https://www.gov.br/inca/pt-br/assuntos/gestor-e-profissional-de-saude/controle-do-cancer-de-mama/acoes/prevencao"
+  },
+  {
+    "id": "q8",
+    "category": "Mitos e Fatos",
+    "difficulty": "Média",
+    "points": 25,
+    "question": "Ter casos de câncer de mama na família significa que a pessoa certamente desenvolverá a doença?",
+    "options": [
+      "Não. O histórico familiar alerta para a necessidade de acompanhamento médico atento, mas a maioria dos casos não é de origem hereditária direta",
+      "Sim, é uma condição genética 100% determinante e inevitável",
+      "Não, a genética não tem qualquer relevância no organismo humano",
+      "Apenas se o caso familiar tiver ocorrido antes dos 20 anos"
+    ],
+    "correct": 0,
+    "explanation": "Aproximadamente 5% a 10% dos casos de câncer de mama são hereditários associados a mutações em genes como BRCA1 e BRCA2. Ter histórico familiar eleva a vigilância, mas jamais significa certeza de adoecimento.",
+    "source": "Linhas de Cuidado da Saúde da Mulher — Ministério da Saúde",
+    "sourceUrl": "https://linhasdecuidado.saude.gov.br/portal/cancer-de-mama/"
+  },
+  {
+    "id": "q9",
+    "category": "Sinais e Conduta Clínica",
+    "difficulty": "Fácil",
+    "points": 20,
+    "question": "Se uma pessoa notar um nódulo endurecido ou alteração na mama, qual deve ser a conduta recomendada?",
+    "options": [
+      "Procurar avaliação médica em uma unidade de saúde para investigação especializada",
+      "Aguardar alguns meses para conferir se diminui sozinho",
+      "Fazer massagens vigorosas para dissolver o nódulo",
+      "Substituir a consulta por pesquisas e autodiagnóstico em fóruns"
+    ],
+    "correct": 0,
+    "explanation": "Qualquer alteração suspeita (nódulo endurecido, retração de pele ou mamilo, saída espontânea de líquido) justifica uma consulta médica imediata. Auto-observação é autoconhecimento, não diagnóstico.",
+    "source": "IARC / OMS / INCA — Sinais de Alerta",
+    "sourceUrl": "https://gco.iarc.who.int/media/gco/includes/CSA_Chp_4-8_Breast.pdf"
+  },
+  {
+    "id": "q10",
+    "category": "Diretrizes do SUS",
+    "difficulty": "Média",
+    "points": 25,
+    "question": "Qual é a recomendação oficial do Ministério da Saúde para o rastreamento mamográfico de rotina no SUS em mulheres assintomáticas?",
+    "options": [
+      "Mamografia a cada dois anos para mulheres na faixa etária de 50 a 74 anos",
+      "Mamografia semestral para todas as jovens a partir dos 16 anos",
+      "Mamografia anual apenas a partir dos 75 anos de idade",
+      "Ultrassonografia mensal obrigatória para todas as idades"
+    ],
+    "correct": 0,
+    "explanation": "Para mulheres assintomáticas (sem sinais), o SUS preconiza a mamografia bienal (a cada 2 anos) entre 50 e 74 anos. Mulheres com sintomas suspeitos devem ser avaliadas em qualquer idade.",
+    "source": "Ministério da Saúde — Diretrizes para o Controle do Câncer de Mama",
+    "sourceUrl": "https://linhasdecuidado.saude.gov.br/portal/cancer-de-mama/"
+  }
+]

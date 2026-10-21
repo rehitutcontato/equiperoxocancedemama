@@ -124,31 +124,112 @@ app.post('/api/community/:id/like', async (req, res) => {
 });
 
 // -------------------------------------------------------------
-// ROTAS DE API: CHATBOT IA "DRA. ROSA" (GEMINI + KNOWLEDGE ENGINE)
+// BASE DE CONHECIMENTO CIENTÍFICA INCA / MINISTÉRIO DA SAÚDE
 // -------------------------------------------------------------
-const KNOWLEDGE_RESPONSES = [
+const KNOWLEDGE_BASE = [
   {
-    keywords: ['número', 'dado', 'estatística', 'casos', 'quantos', 'estimativa', '78', '78.610'],
-    response: `🌸 **Dados Oficiais do INCA (Triênio 2026–2028):**\n\n- **78.610 novos casos por ano** estimados no Brasil.\n- **71,57 novos casos a cada 100 mil mulheres** (taxa de incidência).\n- **30% de todos os cânceres femininos** diagnosticados no país, ocupando o **1º lugar** em incidência.\n- Em 2023, foram registrados **20.165 óbitos** femininos.\n\n*Fonte oficial: INCA — Síntese de Resultados e Comentários 2026–2028.*`
+    id: 'prevencao_protecao',
+    keywords: [
+      'proteger', 'proteção', 'proteger-se', 'se proteger', 'como se proteger',
+      'prevenção', 'prevenir', 'evitar', 'como evitar', 'cuidado', 'cuidados',
+      'autocuidado', 'hábitos', 'habito', 'alimentação', 'exercício', 'exercicio',
+      'atividade física', 'esporte', 'peso', 'emagrecer', 'obesidade', 'álcool',
+      'alcool', 'bebida', 'beber', 'fumo', 'fumar', 'cigarro', 'tabaco',
+      'amamentar', 'amamentação', '28%'
+    ],
+    response: `🌿 **Como se Proteger e Prevenir o Câncer de Mama:**\n\nSegundo dados oficiais do **INCA**, adotar um estilo de vida saudável pode **ajudar a evitar cerca de 28% dos casos** da doença. As principais medidas protetoras comprovadas são:\n\n1. 🏃‍♀️ **Praticar atividade física regularmente:** Pelo menos 150 minutos por semana de caminhada, corrida, dança ou esportes.\n2. ⚖️ **Manter o peso corporal adequado:** Principalmente após a menopausa, pois a gordura corporal em excesso eleva os níveis de estrogênio.\n3. 🥗 **Alimentação saudável e variada:** Rica em frutas, legumes, verduras, grãos integrais e pobre em ultraprocessados.\n4. 🚫 **Evitar ou reduzir bebidas alcoólicas:** O consumo de álcool é um dos fatores modificáveis mais relevantes no risco celular.\n5. 🤱 **Amamentar quando possível:** A amamentação estimula a renovação celular nos ductos mamários e atua como forte fator protetor para mãe e bebê.\n6. 🚭 **Não fumar:** A nicotina e as toxinas do cigarro afetam o DNA e a saúde imunológica.\n\n*Atenção: Hábitos saudáveis protegem muito, mas devem sempre ser acompanhados da mamografia periódica no SUS a partir dos 50 anos.*`
   },
   {
-    keywords: ['prevenção', 'hábitos', 'prevenir', 'evitar', 'alimentação', 'atividade', '28%'],
-    response: `🌿 **Prevenção Primária segundo o INCA:**\n\nO INCA estima que até **28% dos casos de câncer de mama podem ser evitados** através de hábitos saudáveis:\n\n1. **Atividade física regular** (caminhada, esportes, dança).\n2. **Manutenção do peso adequado** (especialmente após a menopausa).\n3. **Alimentação saudável e variada** (rica em vegetais, frutas e fibras).\n4. **Evitar ou reduzir bebidas alcoólicas**.\n5. **Amamentação** (fator protetor comprovado para mães e bebês).\n6. **Não fumar** e evitar terapias hormonais sem indicação médica.\n\n*Lembre-se: ter hábitos saudáveis protege o corpo, mas o diagnóstico precoce continua fundamental!*`
+    id: 'sinais_sintomas',
+    keywords: [
+      'sinal', 'sinais', 'sintoma', 'sintomas', 'caroço', 'caroco', 'nódulo', 'nodulo',
+      'nódulos', 'nodulos', 'pele', 'laranja', 'casca de laranja', 'mamilo', 'bico',
+      'secreção', 'secrecao', 'líquido', 'liquido', 'sangue', 'axila', 'axilas',
+      'íngua', 'ingua', 'pescoço', 'inchaço', 'inchaco', 'dor', 'doer', 'dói',
+      'abaulamento', 'vermelhidão', 'coceira'
+    ],
+    response: `🔍 **Principais Sinais e Sintomas de Alerta (INCA):**\n\nAo observar ou apalpar as mamas, procure avaliação médica se notar:\n\n- 🔴 **Nódulo ou caroço na mama:** Principalmente se for endurecido, fixo, indolor e que não desaparece após o ciclo menstrual.\n- 🍊 **Pele com aspecto de "casca de laranja":** Retração cutânea, repuxamento, rugosidade ou calor localizado.\n- 🔄 **Alterações no mamilo:** Retração repentina, inversão (bico voltado para dentro) ou desvio de posição.\n- 💧 **Saída espontânea de secreção:** Líquido saindo de um dos mamilos sem apertar, em especial se for transparente ou com sangue.\n- 🩺 **Nódulos ou caroços nas axilas ou pescoço:** Linfonodos aumentados que persistem por mais de 3 semanas.\n- ⚠️ **Inchaço assimétrico:** Edema ou aumento progressivo evidente de uma das mamas.\n\n*Importante: Perceber uma alteração NÃO é diagnóstico de câncer, mas exige consulta rápida em uma Unidade Básica de Saúde (UBS).*`
   },
   {
-    keywords: ['sinais', 'sintomas', 'caroço', 'nódulo', 'pele', 'laranja', 'mamilo', 'secreção'],
-    response: `🔍 **Principais Sinais de Alerta para Avaliação Médica:**\n\n- **Nódulo ou caroço na mama**, fixo, endurecido e indolor.\n- **Pele com aspecto de 'casca de laranja'** ou retração cutânea.\n- **Alterações no mamilo** (inversão, desvio ou dor localizada).\n- **Saída espontânea de secreção** (especialmente transparente ou sanguinolenta).\n- **Pequenos nódulos palpáveis nas axilas ou no pescoço**.\n\n⚠️ *Importante: Notar qualquer um desses sinais NÃO significa necessariamente ter câncer, mas exige consulta imediata em uma Unidade Básica de Saúde (UBS).*`
+    id: 'rastreamento_mamografia_sus',
+    keywords: [
+      'mamografia', 'rastreamento', 'idade', 'quantos anos', 'qual idade', 'com quantos anos',
+      'quando fazer', 'de quanto em quanto', 'anual', 'bienal', '2 anos', '50 anos', '74 anos',
+      'faixa etária', 'exame de rotina', 'ultrassom', 'eco', 'ultrassonografia'
+    ],
+    response: `🏥 **Diretrizes Oficiais de Mamografia no SUS (Ministério da Saúde):**\n\n- **Público-alvo de Rotina:** Mulheres entre **50 e 74 anos** que não apresentam sintomas.\n- **Periodicidade recomendada:** A cada **2 anos (bienal)**.\n- **Por que essa faixa etária?** Evidências científicas internacionais comprovam que é nessa idade que o rastreamento mamográfico traz o maior benefício de redução da mortalidade com menor incidência de falso-positivos.\n- **Se houver sintomas suspeitos em qualquer idade:** A avaliação médica e o exame diagnóstico (mamografia ou ultrassonografia) são garantidos **em qualquer idade** na rede pública!\n\n*Procure a Unidade Básica de Saúde (UBS) do seu bairro para requisição e agendamento gratuito.*`
   },
   {
-    keywords: ['mamografia', 'sus', 'idade', 'rastreamento', 'exame', '50', '74', 'atendimento', '136'],
-    response: `🏥 **Diretrizes de Rastreamento no SUS (Ministério da Saúde):**\n\n- **Público-alvo assintomático:** Mulheres de **50 a 74 anos**.\n- **Periodicidade:** A cada **2 anos** (mamografia bienal).\n- **Com sintomas suspeitos:** A avaliação médica e os exames de imagem diagnósticos são garantidos **em qualquer idade** pelo SUS!\n- **Onde buscar:** Unidade Básica de Saúde (UBS) do seu bairro ou ligue gratuitamente para o **Disque Saúde 136**.\n\n*Diferença essencial: Rastreamento é o exame preventivo de rotina; Diagnóstico é o exame investigativo quando já existe alteração percebida.*`
+    id: 'atendimento_locais',
+    keywords: [
+      'onde ir', 'onde buscar', 'onde tem', 'atendimento', 'onde fazer', 'como agendar',
+      'ubs', 'posto de saúde', 'posto de saude', 'posto', 'hospital', '136', 'disque 136',
+      'disque saúde', 'disque saude', 'meu sus digital', 'conecte sus', 'consulta',
+      'marcação', 'marcar', 'gratuito', 'de graça', 'cacon', 'unacon'
+    ],
+    response: `📍 **Onde Buscar Informações e Atendimento no Brasil:**\n\nO Sistema Único de Saúde (SUS) oferece acolhimento, exames e tratamento 100% gratuitos:\n\n1. 🏥 **Unidade Básica de Saúde (UBS / Postinho):** É a porta de entrada. Vá à UBS mais próxima de sua casa com o documento de identidade e Cartão SUS para consulta e solicitação de exames.\n2. 📞 **Disque Saúde 136:** Central telefônica gratuita do Ministério da Saúde. Funciona 24 horas para tirar dúvidas sobre sintomas, saber onde fazer mamografia e obter orientações.\n3. 📱 **Aplicativo Meu SUS Digital:** Permite consultar histórico de consultas, resultados de exames e a rede credenciada de saúde.\n4. 🎗️ **Centros de Alta Complexidade (CACON e UNACON):** Hospitais de referência em oncologia credenciados pelo Ministério da Saúde em todos os estados brasileiros (ex: INCA no RJ, Hospital de Amor e hospitais universitários).`
   },
   {
-    keywords: ['mito', 'sutiã', 'desodorante', 'hereditário', 'genética', 'família'],
-    response: `💡 **Mitos e Verdades sobre o Câncer de Mama:**\n\n❌ **Mito:** Desodorante ou sutiã de bojo causam câncer. *(Falso! Não há nenhuma base biológica ou científica nisso).* \n❌ **Mito:** Ter caso na família significa que eu terei a doença. *(Apenas 5% a 10% dos casos são hereditários. Histórico requer acompanhamento regular, mas não é sentença).* \n✅ **Verdade:** Homens também podem ter câncer de mama, correspondendo a cerca de 1% do total de casos.\n✅ **Verdade:** O autoexame ajuda no autoconhecimento, mas NÃO substitui a mamografia.`
+    id: 'dados_estatisticas',
+    keywords: [
+      'número', 'numero', 'números', 'numeros', 'dado', 'dados', 'estatística', 'estatisticas',
+      'quantos casos', 'quantas pessoas', 'quantas mulheres', 'morte', 'mortes', 'óbito',
+      'obito', 'óbitos', 'obitos', 'mortalidade', 'incidência', 'incidencia', '78',
+      '78.610', '71,57', '30%', '20.165', '2026', '2028', '2023', 'brasil', 'triênio'
+    ],
+    response: `📊 **Dossiê Estatístico do Câncer de Mama no Brasil (INCA):**\n\n- **78.610 novos casos estimados por ano** no triênio 2026–2028.\n- **71,57 casos novos a cada 100 mil mulheres** (taxa bruta de incidência).\n- **30,0% de todos os novos tumores femininos**, sendo o **1º tipo de câncer mais incidente** entre mulheres no país (exceto pele não melanoma).\n- **20.165 óbitos** registrados em mulheres no Brasil (dados consolidados de 2023).\n- **11,71 óbitos por 100 mil mulheres** (taxa de mortalidade ajustada por idade em 2021).\n- **28% dos diagnósticos** poderiam ser evitados exclusivamente com hábitos de vida saudáveis.\n\n*Fonte oficial: Instituto Nacional de Câncer (INCA) — Estimativa 2026–2028.*`
+  },
+  {
+    id: 'mitos_verdades',
+    keywords: [
+      'mito', 'mitos', 'verdade', 'verdades', 'sutiã', 'sutia', 'bojo', 'aro',
+      'desodorante', 'antitranspirante', 'homem', 'homens', 'família', 'familia',
+      'hereditário', 'hereditario', 'genética', 'genetica', 'mãe', 'mae', 'avó',
+      'avo', 'cura', 'tem cura', 'amamentação protege'
+    ],
+    response: `💡 **Mitos e Verdades sobre o Câncer de Mama:**\n\n❌ **Mito: "Usar desodorante antitranspirante ou sutiã de bojo/aro causa câncer."**\n*Falso! Não há nenhuma evidência científica ou biológica de que o alumínio de antitranspirantes ou o suporte do sutiã causem mutações celulares.*\n\n❌ **Mito: "Ter caso na família significa que eu certamente terei câncer."**\n*Falso! Apenas 5% a 10% dos casos são causados por mutações genéticas hereditárias (como nos genes BRCA1 e BRCA2). Histórico exige atenção e exames regulares, mas não é garantia de adoecimento.*\n\n✅ **Verdade: "Homens também podem desenvolver câncer de mama."**\n*Verdade! Embora raro, homens possuem tecido mamário e representam cerca de 1% do total de diagnósticos.*\n\n✅ **Verdade: "Quanto mais cedo for diagnosticado, maiores são as chances de cura."**\n*Verdade! Quando detectado na fase inicial por exames preventivos, as chances de cura superam 95%.*`
+  },
+  {
+    id: 'autoconhecimento_corpo',
+    keywords: [
+      'conhecer o corpo', 'conhecer meu corpo', 'autoexame', 'auto-exame', 'autoexame substitui',
+      'tocar', 'apalpar', 'como apalpar', 'espelho', 'banho', 'deitada', 'deitar'
+    ],
+    response: `🪞 **Conhecimento do Próprio Corpo e Cuidados com as Mamas:**\n\nA auto-observação deve ser um hábito natural em três momentos fáceis:\n\n1. 🪞 **Em frente ao espelho:** Com os braços caídos, depois levantados e depois apoiados na cintura, observe o contorno, o formato e se há alguma deformação ou pele franzida.\n2. 🚿 **Durante o banho:** Com a pele úmida e ensaboada, levante um braço e use as pontas dos dedos da outra mão para apalpar suavemente em círculos toda a extensão da mama e axila.\n3. 🛏️ **Ao deitar-se:** Coloque uma almofada sob o ombro e palpe a mama procurando qualquer caroço ou ponto endurecido.\n\n*⚠️ Lembrete de ouro: Conhecer o corpo ajuda você a notar mudanças precoces, mas NÃO substitui a mamografia bienal aos 50–74 anos nem a consulta médica.*`
   }
 ];
 
+function findBestKnowledgeResponse(userMessage) {
+  const clean = userMessage
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, ""); // Remove acentos para facilitar correspondência
+
+  let bestMatch = null;
+  let highestScore = 0;
+
+  for (const item of KNOWLEDGE_BASE) {
+    let score = 0;
+    for (const kw of item.keywords) {
+      const cleanKw = kw.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+      if (clean.includes(cleanKw)) {
+        // Palavras maiores valem mais pontos de especificidade
+        score += cleanKw.length > 5 ? 3 : 1;
+      }
+    }
+
+    if (score > highestScore) {
+      highestScore = score;
+      bestMatch = item.response;
+    }
+  }
+
+  return highestScore > 0 ? bestMatch : null;
+}
+
+// -------------------------------------------------------------
+// ENDPOINT DE CHAT DA DRA. ROSA
+// -------------------------------------------------------------
 app.post('/api/chat', async (req, res) => {
   try {
     const { message } = req.body;
@@ -156,9 +237,8 @@ app.post('/api/chat', async (req, res) => {
       return res.status(400).json({ success: false, error: 'Mensagem vazia' });
     }
 
-    const lower = message.toLowerCase();
-
-    if (GEMINI_API_KEY && !GEMINI_API_KEY.includes(' ') && GEMINI_API_KEY.length > 20) {
+    // 1. Tentar consulta ao Gemini se houver chave válida do Google (começando com AIza)
+    if (GEMINI_API_KEY && GEMINI_API_KEY.startsWith('AIza') && GEMINI_API_KEY.length > 25) {
       try {
         const geminiEndpoint = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${encodeURIComponent(GEMINI_API_KEY)}`;
         
@@ -180,9 +260,7 @@ Responda de forma clara, formatada com tópicos e emojis gentis.`;
             contents: [
               {
                 role: 'user',
-                parts: [
-                  { text: systemPrompt + "\n\nPergunta do usuário: " + message }
-                ]
+                parts: [{ text: systemPrompt + "\n\nPergunta do usuário: " + message }]
               }
             ]
           }),
@@ -201,26 +279,28 @@ Responda de forma clara, formatada com tópicos e emojis gentis.`;
           }
         }
       } catch (geminiError) {
-        console.log('Gemini API offline ou chave de teste, utilizando Motor Especializado Rosa IA.');
+        console.log('Gemini API offline ou chave com restrição, utilizando Motor Especializado Rosa IA.');
       }
     }
 
-    let matchedResponse = null;
-    for (const item of KNOWLEDGE_RESPONSES) {
-      if (item.keywords.some(k => lower.includes(k))) {
-        matchedResponse = item.response;
-        break;
-      }
+    // 2. Motor de Conhecimento Científico Especializado (INCA / MS)
+    const matchedResponse = findBestKnowledgeResponse(message);
+
+    if (matchedResponse) {
+      return res.json({
+        success: true,
+        reply: matchedResponse,
+        provider: 'Dra. Rosa IA (Curadoria INCA / Ministério da Saúde)'
+      });
     }
 
-    if (!matchedResponse) {
-      matchedResponse = `🌸 Olá! Sou a **Dra. Rosa**, assistente virtual da campanha Rosa em Alerta.\n\nPosso te ajudar com informações verificadas sobre:\n- 📊 **Estatísticas Oficiais do INCA (2026–2028)**\n- 🏃‍♀️ **Prevenção Primária (hábitos que reduzem em 28% os riscos)**\n- 🔍 **Sinais de Alerta que merecem atenção médica**\n- 🏥 **Diretrizes de Mamografia no SUS e Disque 136**\n- 💡 **Mitos e Verdades sobre a saúde das mamas**\n\n*Como posso ajudar você hoje? Digite sua dúvida ou selecione uma das opções acima!*`;
-    }
+    // Resposta padrão caso nenhuma palavra-chave médica seja identificada
+    const defaultResponse = `🌸 Olá! Sou a **Dra. Rosa**, assistente virtual educativa da campanha *Rosa em Alerta*.\n\nPosso esclarecer qualquer dúvida com base nas diretrizes oficiais do **INCA** e **Ministério da Saúde**:\n\n- 🛡️ **Como se proteger e hábitos saudáveis** (que evitam até 28% dos casos)\n- 🔍 **Sinais de alerta** (nódulos, retração cutânea e secreções)\n- 🏥 **Mamografia no SUS** (idade recomendada e periodicidade de 2 anos)\n- 📍 **Onde buscar atendimento gratuito** (UBS e Disque Saúde 136)\n- 📊 **Estatísticas no Brasil** (78.610 novos casos estimados no triênio 2026–2028)\n- 💡 **Mitos e verdades** (desodorantes, sutiãs e histórico familiar)\n\n*Digite sua dúvida (ex: "como se proteger?", "onde fazer mamografia?") ou selecione um dos botões abaixo!*`;
 
     res.json({
       success: true,
-      reply: matchedResponse,
-      provider: 'Motor Especializado Rosa IA (INCA/MS Curadoria)'
+      reply: defaultResponse,
+      provider: 'Dra. Rosa IA (Curadoria INCA / Ministério da Saúde)'
     });
 
   } catch (error) {
